@@ -1,0 +1,362 @@
+/* Base Styles */
+.expertise-wrapper {
+    height: -webkit-fill-available;
+    min-height: 60vh;
+    width: 100%;
+    position: relative;
+    overscroll-behavior: none;
+    background-color: #ffffff00;
+}
+
+.expertise-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    height: -webkit-fill-available;
+}
+
+.expertise-content {
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    will-change: transform;
+}
+
+.expertise-content>div {
+    width: 100%;
+    min-height: -webkit-fill-available;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    /* margin-bottom: -25.5%; */
+    flex-shrink: 0;
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+
+/* Intro Section */
+.expertise-intro {
+    text-align: center;
+}
+
+.expertise-intro-text {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    color: #ffffff;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.expertise-quote {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.05em;
+}
+
+/* Circle Section */
+.creator-circle {
+    width: 65vw;
+    max-width: 800px;
+    height: auto;
+}
+
+/* Summary Section */
+.expertise-summary {
+    text-align: center;
+    margin-top: -20px;
+}
+
+.expertise-summary-text {
+    font-size: 1.25rem;
+    color: #e2e2e2;
+    margin-bottom: 0.5rem;
+}
+
+.expertise-summary-highlight {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 2rem;
+}
+
+/* Scroll Indicator */
+/* .scroll-indicator {
+    position: fixed;
+    bottom: 40px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 1000;
+    -webkit-animation: bounce 2s infinite;
+    -moz-animation: bounce 2s infinite;
+    -o-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
+    cursor: pointer;
+    color: white;
+    opacity: 0.8;
+    will-change: transform;
+    pointer-events: auto;
+} */
+
+/* Add bounce animation for desktop/laptop only */
+@keyframes bounce-section {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-10px);
+    }
+
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Apply animation only for large screens */
+@media screen and (min-width: 1024px) {
+    .expertise-content>div {
+        animation: bounce-section 2s ease infinite;
+    }
+}
+
+
+/* Add this to your Expertise.css */
+.scroll-indicator {
+    position: fixed;
+    bottom: 40px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 1000;
+    -webkit-animation: bounce 2s infinite;
+    -moz-animation: bounce 2s infinite;
+    -o-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
+    cursor: pointer;
+    color: white;
+    opacity: 0.8;
+    /* Prevent animation from causing horizontal scrollbar */
+    will-change: transform;
+    pointer-events: auto;
+}
+
+.venn-image {
+    width: 75%;
+}
+
+/* Hide on mobile with cross-browser support */
+@media screen and (max-width: 1023px) {
+    .scroll-indicator {
+        display: none;
+        visibility: hidden;
+        pointer-events: none;
+    }
+
+}
+
+/* Safari-specific fixes */
+@supports (-webkit-touch-callout: none) {
+    .scroll-indicator {
+        /* Ensure proper positioning on iOS Safari */
+        bottom: max(40px, env(safe-area-inset-bottom));
+    }
+}
+
+/* Laptop/Desktop Styles */
+@media screen and (min-width: 1024px) {
+
+    /* New class to reduce gap between sections */
+    .sections-gap {
+        /* margin-top: -80.5rem; */
+        /* Adjust as needed */
+        /* margin-bottom: 0.5rem; */
+        /* Adjust as needed */
+    }
+
+    .sections-gap-2 {
+        /* margin-top: -160.5rem; */
+        /* Adjust as needed */
+    }
+
+    .expertise-wrapper {
+        overflow-y: scroll;
+        scroll-snap-type: y mandatory;
+        scrollbar-width: thin;
+        scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+    }
+
+    .expertise-wrapper::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .expertise-wrapper::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .expertise-wrapper::-webkit-scrollbar-thumb {
+        background-color: rgba(255, 255, 255, 0.3);
+        border-radius: 4px;
+    }
+
+    .expertise-content {
+        flex-direction: column;
+    }
+
+    .creator-circle {
+        padding: 2rem;
+        width: 65vw;
+    }
+
+    .expertise-summary {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .venn-image {
+        height: 75%;
+        width: 100%;
+    }
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 1023px) {
+    .expertise-wrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .expertise-content {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        width: 100%;
+        height: 100vh;
+        height: -webkit-fill-available;
+    }
+
+    .expertise-content>div {
+        flex: 0 0 100%;
+        min-width: 100%;
+        margin-bottom: 0;
+        height: 100vh;
+        height: -webkit-fill-available;
+        overflow: hidden;
+    }
+
+    .expertise-content::-webkit-scrollbar {
+        height: 8px;
+    }
+
+    .expertise-content::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .expertise-content::-webkit-scrollbar-thumb {
+        background-color: rgba(255, 255, 255, 0.3);
+        border-radius: 4px;
+    }
+
+    .creator-circle {
+        width: 100%;
+        max-width: 90vw;
+        height: auto;
+    }
+
+    .expertise-intro-text {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .expertise-quote {
+        font-size: 1.5rem;
+    }
+
+    .expertise-summary-text {
+        font-size: 1rem;
+    }
+
+    .expertise-summary-highlight {
+        font-size: 1.25rem;
+    }
+
+    .scroll-indicator {
+        display: none;
+        visibility: hidden;
+        pointer-events: none;
+    }
+
+    /* White line (track) - Updated position to bottom */
+    .expertise-wrapper::before {
+        content: "";
+        display: block;
+        height: 2px;
+        width: calc(100% - 40px);
+        background: rgba(255, 255, 255, 0.5);
+        position: absolute;
+        bottom: 8rem;  /* Changed from top to bottom */
+        left: 20px;
+        z-index: 1000;
+    }
+
+    /* Progress indicator - Updated position to bottom */
+    .expertise-wrapper::after {
+        content: "";
+        display: block;
+        height: 2px;
+        width: 53%;
+        background: #FFFFFF;
+        position: absolute;
+        bottom: 8rem;  /* Changed from top to bottom */
+        left: 20px;
+        z-index: 1001;
+        transform: translateX(var(--scroll-progress, 0%));
+        transition: transform 0.1s ease-out;
+    }
+}
+
+/* Add iOS safe area support for the bottom progress bar */
+@supports (-webkit-touch-callout: none) {
+    @media screen and (max-width: 1023px) {
+        .expertise-wrapper::before,
+        .expertise-wrapper::after {
+            bottom: max(2rem, calc(2rem + env(safe-area-inset-bottom)));
+        }
+    }
+}
+
+/* Add/update iOS-specific fixes */
+@supports (-webkit-touch-callout: none) {
+    .expertise-content {
+        height: -webkit-fill-available;
+    }
+    
+    .expertise-content>div {
+        height: -webkit-fill-available;
+    }
+}

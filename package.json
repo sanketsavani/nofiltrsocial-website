@@ -1,0 +1,52 @@
+{
+  "name": "nofiltersocial",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@firebase/firestore": "^4.7.4",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "aws-sdk": "^2.1692.0",
+    "dotenv": "^16.4.7",
+    "emailjs-com": "^3.2.0",
+    "firebase": "^11.0.1",
+    "gsap": "^3.12.5",
+    "lottie-react": "^2.4.0",
+    "lucide-react": "^0.471.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-long-press": "^0.1.6",
+    "react-masonry-css": "^1.0.16",
+    "react-new-window": "^1.0.1",
+    "react-scripts": "5.0.1",
+    "react-slick": "^0.30.2",
+    "slick-carousel": "^1.8.1",
+    "styled-components": "^6.1.13",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

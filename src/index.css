@@ -1,0 +1,166 @@
+/* @font-face {
+  font-family: 'FT Kunst Grotesk Trial';
+  src: url('./fonts/FTKunstGroteskTrial.woff2') format('woff2'),
+    url('./fonts/FTKunstGroteskTrial.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+*/ @font-face {
+  font-family: 'Bebas';
+  src: url('./fonts/Bebas-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* @font-face {
+  font-family: 'OxfordBold';
+  src: url('/public/fonts/Oxford\ Bold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+} */
+
+/* @font-face {
+  font-family: 'Avenir Light';
+  src: url('/public/fonts/AvenirLTStd-Medium.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+} */
+
+@font-face {
+  font-family: 'Avenir Roman';
+  src: url('./fonts/AvenirLTStd-Roman\ -Desc.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Grovana Medium';
+  src: url('./fonts/Grovana\ Medium\ -\ Menu.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'TT-Commons';
+  src: url('./fonts/TT\ Commons\ Medium\ -\ NOFILTR.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+body {
+  margin: 0;
+  font-family: 'Avenir Roman', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* .App {
+  cursor: url(./Logo-white.ico) auto !important;
+}
+
+* {
+  cursor: url("./Logo-white.ico") 16 16, auto !important;
+} */
+
+/* code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} */
+
+/* Add to your global CSS file
+.venn-diagram {
+  position: relative;
+  width: 400px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.venn-circle {
+  background: rgba(255, 255, 255, 0.9);
+  mix-blend-mode: multiply;
+}
+
+.venn-circle:first-child {
+  left: 0;
+}
+
+.venn-circle:last-child {
+  right: 0;
+}
+
+.expertise-container {
+  background-color: #f3f4f6;
+  padding: 4rem 1rem;
+}
+
+.expertise-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .expertise-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.department-card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.highlight-text {
+  color: #2563eb;
+}
+
+.branding-diagram {
+  position: relative;
+  width: 16rem;
+  height: 8rem;
+  margin: 2rem auto;
+}
+ */
+
+
+/* Add to your global CSS or create a new CSS module */
+/* .roster-slider .slick-slide {
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
+  opacity: 0.5;
+}
+
+.roster-slider .slick-center {
+  transform: scale(1.2);
+  opacity: 1;
+  z-index: 1;
+}
+
+.roster-slider .slick-slide>div {
+  margin: 0 10px;
+}
+
+/* Smooth transitions */
+/* .roster-slider .slick-slide img {
+  transition: all 0.3s ease;
+} */
+
+/* Fix for overflow issues */
+/* .roster-slider .slick-list {
+  overflow: visible;
+  margin: 0 -10px;
+  padding: 60px 0;
+} */
+
+/* Optional: custom dots styling */
+/* .roster-slider .slick-dots {
+  bottom: -40px;
+} */
+
+/* .roster-slider .slick-dots li button:before {
+  font-size: 12px;
+  color: #666;
+} */
+/* 
+.roster-slider .slick-dots li.slick-active button:before {
+  color: #000;
+}  */

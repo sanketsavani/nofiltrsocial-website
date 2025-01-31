@@ -1,0 +1,61 @@
+:root {
+  --color: radial-gradient(circle, #000618, #000a2b, #000295, #1a1cd1);
+  --blur-1-size: clamp(480px, 48vw, 48vw);
+  --blur-2-size: clamp(360px, 48vw, 48vw);
+  --blur-3-size: clamp(120px, 12vw, 12vw);
+  --blur-amount: clamp(40px, 5vw, 90px);
+  --radius: 900px;
+}
+
+.background-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: radial-gradient(circle, #696bff, #94c2ff, #cfe4ff);
+  overflow: hidden;
+  z-index: 0;
+}
+
+.blur {
+  position: absolute;
+  z-index: 1;
+  border-radius: var(--radius);
+  filter: blur(var(--blur-amount));
+  background: var(--color);
+  will-change: transform;
+}
+
+.blur:nth-child(1) {
+  height: var(--blur-1-size);
+  width: calc(var(--blur-1-size) * 2.1);
+  margin: calc(300px / 2);
+}
+
+.blur:nth-child(2) {
+  height: var(--blur-2-size);
+  margin: calc(var(--radius) / 2);
+  width: calc(var(--blur-2-size) * 1.75);
+  top: 20vh;
+  right: 20vh;
+}
+
+.blur:nth-child(3) {
+  height: var(--blur-3-size);
+  width: var(--blur-3-size);
+  bottom: 20vh;
+  left: 20vh;
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(50px, 20px) scale(1.1);
+  }
+  100% {
+    transform: translate(-30px, -10px) scale(10.9);
+  }
+}

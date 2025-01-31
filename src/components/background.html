@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Blur Section</title>
+  <style>
+    :root {
+      --color: radial-gradient(circle, #000618, #000a2b, #000295, #1a1cd1);
+      --blur-1-size: clamp(480px, 48vw, 48vw);
+      --blur-2-size: clamp(360px, 48vw, 48vw);
+      --blur-3-size: clamp(120px, 12vw, 12vw);
+      --blur-amount: clamp(40px, 5vw, 90px);
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    section {
+      height: 100vh;
+      padding: 5vw;
+      background: radial-gradient(circle, #696bff, #94c2ff, #cfe4ff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .blur {
+      position: absolute;
+      border-radius: 900px;
+      filter: blur(var(--blur-amount));
+      background: var(--color);
+      animation: float 10s infinite ease-in-out alternate;
+    }
+
+    .blur:nth-child(1) {
+      height: var(--blur-1-size);
+      width: calc(var(--blur-1-size) * 1.1);
+      top: 10%;
+      left: 15%;
+    }
+
+    .blur:nth-child(2) {
+      height: var(--blur-2-size);
+      width: calc(var(--blur-2-size) * 0.75);
+      top: 50%;
+      right: 20%;
+    }
+
+    .blur:nth-child(3) {
+      height: var(--blur-3-size);
+      width: var(--blur-3-size);
+      bottom: 10%;
+      left: 30%;
+    }
+
+    h1 {
+      font-weight: 800;
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: white;
+      text-align: center;
+      z-index: 2;
+    }
+
+    .credit {
+      margin-top: 3rem;
+      text-align: center;
+      z-index: 2;
+    }
+
+    .credit a {
+      color: blue;
+      text-decoration: none;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translate(0, 0) rotate(0deg);
+      }
+      50% {
+        transform: translate(50px, -30px) rotate(15deg);
+      }
+      100% {
+        transform: translate(-50px, 30px) rotate(-15deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="wrapper">
+    <div class="blur"></div>
+    <div class="blur"></div>
+    <div class="blur"></div>
+   
+  </section>
+</body>
+</html>

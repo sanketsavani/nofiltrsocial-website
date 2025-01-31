@@ -1,0 +1,15 @@
+{
+  "short_name": "NOFILTR",
+  "name": "NOFILTR SOCIAL",
+  "icons": [
+    {
+      "src": "Logo-black.png",
+      "type": "image/png",
+      "sizes": "143x143"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
